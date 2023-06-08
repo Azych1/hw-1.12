@@ -15,4 +15,20 @@ public class Author {
         return this.lastName;
     }
 
+    public String toString() {
+        return " Имя: " + this.getFirstName() + " Фамилия: " + this.getLastName();
+    }
+
+    public boolean equals(Author secondAuthor) {
+        if (this.getClass() != secondAuthor.getClass()) {
+            return false;
+        }
+        Author author2 = (Author) secondAuthor;
+        return firstName.equals(author2.firstName)&&lastName.equals(author2.lastName);
+    }
+
+    public int hashCode() {
+        return java.util.Objects.hash(firstName, lastName);
+    }
+
 }
