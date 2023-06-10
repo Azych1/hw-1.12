@@ -16,10 +16,10 @@ public class Author {
     }
 
     public String toString() {
-        return " Имя: " + this.getFirstName() + " Фамилия: " + this.getLastName();
+        return this.getFirstName() +" "+ this.getLastName();
     }
 
-    public boolean equals(Author secondAuthor) {
+    public boolean equals(Object secondAuthor) {
         if (this.getClass() != secondAuthor.getClass()) {
             return false;
         }

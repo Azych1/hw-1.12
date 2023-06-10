@@ -26,15 +26,15 @@ public class Book {
     }
 
     public String toString() {
-        return "Название: " + this.name + " Автор: " + this.author.getFirstName() + " " + this.author.getLastName() + " Год издания: " + this.year;
+        return "Название: " + this.name + " Автор: " + this.author.toString() + " Год издания: " + this.year;
     }
 
-    public boolean equals(Book secondBook) {
+    public boolean equals(Object secondBook) {
         if (this.getClass() != secondBook.getClass()) {
             return false;
         }
         Book book2 = (Book) secondBook;
-        return name.equals(book2.name)&&author.equals(book2.author)&&year==book2.year;
+        return name.equals(book2.name) && author.equals(book2.author) && year == book2.year;
     }
 
     public int hashCode() {
